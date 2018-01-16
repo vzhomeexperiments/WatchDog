@@ -10,3 +10,7 @@ Attach this tool to any trading terminal as follows:
 1. Create chart window EURUSD M1
 2. Set default settings of EA
 3. Make sure to place your trading account to Favorites Folder
+
+# How to learn
+
+https://www.udemy.com/your-home-trading-environment/?couponCode=LAZYTRADE-GIT
