@@ -13,4 +13,8 @@ Attach this tool to any trading terminal as follows:
 
 # How to learn
 
-https://www.udemy.com/your-home-trading-environment/?couponCode=LAZYTRADE-GIT
+Join these UDEMY courses with a tremendious discount!
+
+* https://www.udemy.com/your-trading-journal/?couponCode=LAZYTRADE-GIT
+* https://www.udemy.com/your-trading-robot/?couponCode=LAZYTRADE-GIT
+* https://www.udemy.com/your-home-trading-environment/?couponCode=LAZYTRADE-GIT
