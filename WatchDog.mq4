@@ -10,10 +10,11 @@
 
 extern int AccountRow = 1;  
 extern int DelayMinutes = 5;    
+extern bool    eMailAlert                       = False;
  
 // AccountRow   - Your favourites account number
 // DelayMinutes - Delay in minutes, has to be greater than the chart timeframe
-
+#include <18_EmailFromMT4.mqh>
 #include <WinUser32.mqh>
 #import "user32.dll"
   int GetParent(int hWnd);
@@ -32,6 +33,14 @@ bool is_reconect = true;
 void OnInit()
 {
    Old_Time=iTime(NULL,0,0);
+   
+   //send email on Sunday Morning once platform re-starts to work...
+      if(eMailAlert && TimeDayOfWeek(TimeCurrent()) == 0 && Hour() == 3)
+        {
+         EmailFromMT4(AccountRow);
+        }
+   
+   
    OnTick();
 }
  
@@ -54,6 +63,10 @@ void OnTick()
          Print("Watchdog: The chart has not been updated in " + string(DelayMinutes) + " minutes. Initating reconnection procedure...");
          Login(AccountRow);
       }
+      
+      
+      
+      
       Sleep(DelayMinutes*60*1000);
    }
    return;
